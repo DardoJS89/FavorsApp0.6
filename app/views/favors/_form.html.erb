@@ -1,31 +1,31 @@
-<%= form_with(model: @favors, local: true) do |form| %>
+    <%= form_with(model: @favors, local: true) do |form| %>
 
-    <div class="field col-md-10">
-        <%= form.label :category %>
-        <%= form.text_field :category %>
+        <div class="field col-md-10" style="background-color: #ffd700;">
+            <%= form.label :category %>
+            <%= form.text_field :category %>
+        </div>
+        <hr>
+            <div class="field col-md-10" style="background-color: #ffd700;">
+            <%= form.label :oneliner %>
+            <%= form.text_field :oneliner %>
+    </div>
+    
+    <div class="field col-md-10" style="background-color: #ffd700;">
+            <%= form.label :address %>
+            <%= form.text_field :address , placeholder:"Default: Current-Address" %>
+        </div>
+        <hr>
+    <div class="field col-md-10" style="background-color: #ffd700;">
+            <%= form.label :description %>
+            <%= form.text_field :description %>
+        </div>
+    
+        <div class="field col-md-10" style="background-color: #ffd700;">
+            <%= form.label :expiration %>
+            <%= form.text_field :expiration , placeholder:"Default: 24hrs" %>
     </div>
     <hr>
-        <div class="field col-md-10">
-        <%= form.label :oneliner %>
-        <%= form.text_field :oneliner %>
-  </div>
-  
-   <div class="field col-md-10">
-        <%= form.label :address %>
-        <%= form.text_field :address , placeholder:"Default: Current-Address" %>
-    </div>
-    <hr>
-   <div class="field col-md-10">
-        <%= form.label :description %>
-        <%= form.text_field :description %>
-    </div>
-   
-    <div class="field col-md-10">
-        <%= form.label :expiration %>
-        <%= form.text_field :expiration , placeholder:"Default: 24hrs" %>
-   </div>
-<hr>
-    <div class="action col-md-10" text-align:center >
-        <%= form.submit %>
-    </div>
+        <div class="action col-md-10" text-align:center id="subit" >
+            <%= form.submit %>
+        </div>
 <% end %>
