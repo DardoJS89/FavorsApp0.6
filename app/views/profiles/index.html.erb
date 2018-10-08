@@ -1,35 +1,37 @@
 
+<div style="background-color: teal;">
+  <h1 align="center" style="background-color: teal;"> <%= @profiles.first_name %>'s Profile</h1>
 
-<h1 align="center" style="background-color: teal;"> <%= @profiles.first_name %>'s Profile</h1>
-
-  <div>
-    <ul class="list-group">
-      <li class="list-group-item"><p>First Name:</p><%= @profiles.first_name %></li>
-      <li class="list-group-item"><p>Age:</p><%= @profiles.age %></li>
-      <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
-      <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
-    </ul>
-  </div>
-
-    <form class="form-inline my-2 my-lg-0 col-md-4">
-      <input class="form-control mr-sm-2" type="search" placeholder="Quick Favor" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Request help</button>
-    </form>
-    <hr>
-
-<body>
-    <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal;">
-      <div class="container">
-        <nav>
-          <ul class="nav navbar-nav navbar-center" style="background-color: teal;">
-            <li><%= link_to "Home",   './profiles#index' %> </li>
-            <li><%= link_to "Map", './favors#index', id: "logo" %> </li>
-            <li><%= link_to "New Favor", './favors/new', id: "logo" %> </li>
-            <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
-          </ul>
-        </nav>
-      </div>
-    </footer>
-    <div class="container">
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item" style="background-color: #009a9a;"><font color="white"><p align="center">First Name:</p><%= @profiles.first_name %></font></li>
+        <li class="list-group-item" style="background-color: #009a9a;"><font color="white"><p align="center">Age:</p><%= @profiles.age %></font></li>
+        <li class="list-group-item" style="background-color: #009a9a;"><font color="white"><p align="center">Age:</p><%= @profiles.age %></font></li>
+        <li class="list-group-item" style="background-color: #009a9a;"><font color="white"><p align="center">Favors completed:</p><%= @profiles.favors_completed %></font></li>
+        <li class="list-group-item" style="background-color: #009a9a;"><font color="white"><p align="center">Favors offered:</p><%= @profiles.favors_offered %></font></li>
+      </ul>
     </div>
+
+      <form class="form-inline my-2 my-lg-0 col-md-4">
+        <input class="form-control mr-sm-2" type="search" placeholder="Quick Favor" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Request help</button>
+      </form>
+      <hr>
+
+  <body>
+      <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal;">
+        <div class="container">
+          <nav>
+            <ul class="nav navbar-nav navbar-center" style="background-color: teal;">
+              <li><%= link_to "Home",   './profiles#index' %> </li>
+              <li><%= link_to "Map", './favors#index', id: "logo" %> </li>
+              <li><%= link_to "New Favor", './favors/new', id: "logo" %> </li>
+              <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+      <div class="container">
+      </div>
   </body>
+</div>
