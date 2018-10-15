@@ -4,7 +4,7 @@
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <ul>
-        <%  Notification.joins( :favor ).where(user_id: current_user.id).order(created_at: :desc).each do |n| %>
+        <% Notification.joins( :favor ).where(user_id: current_user.id).order(created_at: :desc).each do |n| %>
             <li><%= User.find(n.performer_id).profile.name %> wants to help you with <%= n.favor.category %></li>
         <% end %>
     </ul>
